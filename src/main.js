@@ -42,19 +42,7 @@ searchForm.addEventListener("submit", async (event) => {
     //added here
     const currentPage = 1;
     
-   fetchImages(request) 
-      .then((data) => {
-    toggleLoader(false);
-    if (!data.hits.length) {
-              iziToast.warning({
-          title: "No Results",
-          message: "Sorry, there are no images matching your search query. Please try again!",
-        });
-        return;}
-          
-        renderGallery(data.hits)
-        lightbox.refresh();         
-    })
+
       
     try {
         const data = await fetchImages(request, currentPage);
