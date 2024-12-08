@@ -39,8 +39,9 @@ searchForm.addEventListener("submit", async (event) => {
     clearGallery();
     toggleMoreLoadButton(false);
     toggleLoader(true);
-    //added here
-    const currentPage = 1;
+    
+    //changed
+    currentPage = 1;
     
 
       
@@ -95,6 +96,7 @@ loadMoreBtn.addEventListener("click", async () => {
         toggleLoader(false);
     iziToast.error({ title: "Error", message: "Something went wrong. Please try again later." })
     }
+  
     
 })
 
