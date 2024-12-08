@@ -40,7 +40,7 @@ searchForm.addEventListener("submit", async (event) => {
     toggleMoreLoadButton(false);
     toggleLoader(true);
     
-    //changed
+    //fixed refreshing the page
     currentPage = 1;
     
 
@@ -76,6 +76,8 @@ loadMoreBtn.addEventListener("click", async () => {
     try {
         const data = await fetchImages(request, currentPage);
         renderGallery(data.hits);
+        //added gallery
+        lightbox.refresh();
 
 
      const { height: cardHeight } = document
